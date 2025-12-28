@@ -20,7 +20,7 @@ def numberToBase10(maxNum):
   while True:
     result = 0
     base = maxNum + 1
-    print(f"print the number you want to decode from the {base}-base system to the 10-base system.")
+    print(f"print the number you want to decode from the base-{base} system to the base-10 system.")
     userInputNum = input()
     userInputNum = userInputNum.strip().replace(' ', '').replace(',', '.')
     allowedNum = numAlphabet[:base]
@@ -37,7 +37,7 @@ def numberToBase10(maxNum):
     tChar = True
     for char in beforComma + afterComma:
       if char not in allowedNum:
-        print(f"{numWrong}char: '{char}' is not in {base}-base, pls", end=' ')
+        print(f"{numWrong}char: '{char}' is not in base-{base}, pls", end=' ')
         tChar = False
         break
     if not tChar:
